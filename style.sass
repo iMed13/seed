@@ -1,0 +1,199 @@
+// /*
+// Theme Name: bloomflora.ge
+// Theme URI: https:bloomflora.ge
+// Author: Imeda Bekaia
+// Author URI: https://www.facebook.com/iMed.bekaia
+// Description: Bloomflora is georgian company, which sells nitrates for your plants  ground.
+// License: GNU General Public License v2 or later
+// License URI: http://www.gnu.org/licenses/gpl-2.0.html
+// Text Domain: bloomflora
+// Tags: 
+// This theme, like WordPress, is licensed under the GPL.
+// */
+
+// MIX INS
+$large: 2500px
+$middle: 1900px
+$laptop_lg: 1400px
+$laptop_md: 1200px
+$laptop_sm: 1024px
+$tablet: 767px
+$mobile: 500px
+$iphone5: 330px
+
+=large
+  @media (max-width: #{$large})
+    @content
+=middle
+  @media (max-width: #{$middle})
+    @content
+=laptop_lg
+  @media (max-width: #{$laptop_lg})
+    @content
+=laptop_md
+  @media (max-width: #{$laptop_md})
+    @content
+=laptop_sm
+  @media (max-width: #{$laptop_sm})
+    @content
+=tablet
+  @media (max-width: #{$tablet})
+    @content
+=mobile
+  @media (max-width: #{$mobile})
+    @content
+=iphone5
+  @media (max-width: #{$iphone5})
+    @content
+
+
+._container
+    max-width: 1830px
+    // background: red
+    width: 100%
+    padding: 0 15px
+header
+    position: relative
+    ._container
+        position: absolute
+        z-index: 2
+        left: 50%
+        transform: translateX(-50%)
+        nav.header-navigation
+            padding: 30px 0
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: relative
+            .header-left-navigation
+                +laptop_sm
+                    display: none
+                .nav-ul
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    .nav-li
+                        .nav-link
+                            color: #868E96
+                            padding: 0 15px
+                            &:hover
+                                cursor: pointer
+            .header-logo
+                position: absolute
+                left: 50%
+                top: 50%
+                z-index: 4
+                transform: translate(-50%, -50%)
+                +laptop_sm
+                    top: 50px
+                    width: 90px
+                    height: 90px
+                    border-radius: 100%
+                    background: #212529
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    top: 50px !important
+                    transform: translateX(-50%) !important
+                img
+                    width: 60px
+            .header-shop
+                +laptop_sm
+                    display: none
+                ul.shop-ul
+                    display: flex
+                    li.shop-li
+                        padding: 0 10px
+                        a.shop-nav-link
+                            display: block
+                            padding: 0 10px
+    .header-video
+        width: 100%
+        height: 100vh
+        video
+            width: 100%
+            height: 100vh
+            object-fit: cover
+
+footer
+    width: 100%
+    position: absolute
+    z-index: 2
+    left: 50%
+    bottom: 60px
+    transform: translateX(-50%)
+    overflow: hidden
+    +laptop_sm
+        bottom: 0
+    button.lang-choose
+        color: #fff
+        background: none
+        border: none
+        display: none
+        justify-content: center
+        transform: translateY(70px)
+        margin-bottom: 20px
+        transition: all 0.45s
+        outline: none
+        &:hover
+            cursor: pointer !important
+        +laptop_sm
+            display: flex
+            width: 100%
+            text-align: center
+    .active
+        transform: translateY(0) !important
+    .footer-content
+        transition: all 0.45s
+        position: relative
+        &:after
+            content: ""
+            position: absolute
+            left: 0
+            top: -30px
+            width: 30px
+            height: 30px
+            background-image: url("assets/media/image/lang-left.png")
+            background-size: cover
+        &:before
+            content: ""
+            position: absolute
+            right: 0
+            top: -30px
+            width: 30px
+            height: 30px
+            background-image: url("assets/media/image/lang-right.png")
+            background-size: cover
+        +laptop_sm
+            background: #212529
+            padding: 30px 0
+            transform: translateY(100%)
+        ._container
+            margin: 0 auto
+            .footer-social
+                +laptop_sm
+                    display: none
+                .fab
+                    margin: 0 15px
+                    color: #868E96
+                    &:hover
+                        color: #fff
+                        cursor: pointer
+            
+            .footer-language
+                display: none
+                width: 100%
+                // background: red
+                +laptop_sm
+                    display: flex
+                .language-ul
+                    width: 100%
+                    display: flex
+                    justify-content: space-around
+                    align-items: center
+                    .lang-li
+                        .lang-nav-link
+                            color: #868E96
+                            &:hover
+                                color: #fff
