@@ -54,6 +54,12 @@ $iphone5: 330px
     padding: 0 15px
 header
     position: relative
+    .disable-svg
+        path
+            fill: #868E96 !important
+    .svg
+        path
+            fill: #fff
     ._container
         position: absolute
         z-index: 2
@@ -67,18 +73,39 @@ header
             align-items: center
             position: relative
             .header-left-navigation
+                display: flex
+                align-items: center
+                position: relative
                 +laptop_sm
                     display: none
+                .header-search-btn
+                    button
+                        background: none
+                        border: none
                 .nav-ul
                     display: flex
                     justify-content: space-between
                     align-items: center
+                    .active-border
+                        transition: all 0.3s
+                        height: 10px
+                        width: 10px
+                        transform: rotate(45deg)
+                        border-radius: 2px
+                        background: #7EAD56
+                        position: absolute
+                        top: -35px
+                        z-index: 3
+                    .active-nav-link
+                        .nav-link
+                            color: #fff
                     .nav-li
                         .nav-link
                             color: #868E96
                             padding: 0 15px
                             &:hover
                                 cursor: pointer
+                                color: #fff
             .header-logo
                 position: absolute
                 left: 50%
@@ -197,3 +224,4 @@ footer
                             color: #868E96
                             &:hover
                                 color: #fff
+

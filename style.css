@@ -8,6 +8,14 @@ header {
   position: relative;
 }
 
+header .disable-svg path {
+  fill: #868E96 !important;
+}
+
+header .svg path {
+  fill: #fff;
+}
+
 header ._container {
   position: absolute;
   z-index: 2;
@@ -31,10 +39,25 @@ header ._container nav.header-navigation {
   position: relative;
 }
 
+header ._container nav.header-navigation .header-left-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
 @media (max-width: 1024px) {
   header ._container nav.header-navigation .header-left-navigation {
     display: none;
   }
+}
+
+header ._container nav.header-navigation .header-left-navigation .header-search-btn button {
+  background: none;
+  border: none;
 }
 
 header ._container nav.header-navigation .header-left-navigation .nav-ul {
@@ -49,6 +72,24 @@ header ._container nav.header-navigation .header-left-navigation .nav-ul {
           align-items: center;
 }
 
+header ._container nav.header-navigation .header-left-navigation .nav-ul .active-border {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 2px;
+  background: #7EAD56;
+  position: absolute;
+  top: -35px;
+  z-index: 3;
+}
+
+header ._container nav.header-navigation .header-left-navigation .nav-ul .active-nav-link .nav-link {
+  color: #fff;
+}
+
 header ._container nav.header-navigation .header-left-navigation .nav-ul .nav-li .nav-link {
   color: #868E96;
   padding: 0 15px;
@@ -56,6 +97,7 @@ header ._container nav.header-navigation .header-left-navigation .nav-ul .nav-li
 
 header ._container nav.header-navigation .header-left-navigation .nav-ul .nav-li .nav-link:hover {
   cursor: pointer;
+  color: #fff;
 }
 
 header ._container nav.header-navigation .header-logo {
